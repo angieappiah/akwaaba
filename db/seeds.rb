@@ -12,7 +12,7 @@ Site.create([
   {name: "Mole National Park", region: "Northern", description: "Large and commonly seen mammals including elephant, kob, roan antelope, hartebeest, waterbuck, bushbuck, warthog, buffalo, several duikers, baboon, patas and green (vervet) monkeys", likes: "10"},
 ])
 
-Photos.create([
+Photo.create([
     {url: "https://touringghana.com/wp-content/uploads/2016/03/boti-falls.jpg", reviews: "so much fun"}, 
     {url: "https://touringghana.com/wp-content/uploads/2016/03/cape-coast-castle2.jpg", reviews: "beautiful museum with lots of arts"},
     {url: "https://touringghana.com/wp-content/uploads/2016/03/mole.jpg", reviews: "a wonderful site to behold"}, 
