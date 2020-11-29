@@ -22,6 +22,8 @@ class Api::V1::SitesController < ApplicationController
 
     def destroy
         @site = Site.find(params[:id])
+        @site.delete
+        render json: {siteId: @site.id}
 
     end
 
