@@ -1,5 +1,5 @@
 class App {
     constructor(){
-        this.sites = new Sites
+        this.sites = new Sites()
     }
 }
