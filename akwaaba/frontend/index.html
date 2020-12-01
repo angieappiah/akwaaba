@@ -7,17 +7,22 @@
     <title>The Year Of Return</title>
 </head>
 <body>
-    <div class="container">
-        <h1> Sites in Ghana </h1>
-        <form id="new-site-form">
-          <input type="text" name="site-name" id="new-site-name">
+    <header class="header-banner">
+        <h1 class="header-text">Popular Sites</h1>
+    </header>
+
+    <div id="container">
+        <form id="site-form">
+          <input type="text" name="site-name" id="new-site-name" >
+
           <input type="submit">
         </form>
     </div>
-    <script type="application/javascript" src="src/components/sites.js" charset="UTF-8"></script>
-    <script type="application/javascript" src="src/components/app.js" charset="UTF-8"></script>
-    <script type="application/javascript" src="src/adapters/SitesAdapter.js" charset="UTF-8"></script>
-    <script src="https://kit.fontawesome.com/a8e960d804.js" crossorigin="anonymous"></script>
-    <script type="application/javascript" src="src/index.js" charset="UTF-8"></script>
+
+    <script type="text/javascript" src="src/components/site.js"></script>
+    <script type="text/javascript" src="src/components/sites.js"></script>
+    <script type="text/javascript" src="src/components/app.js"></script>
+    <script type="text/javascript" src="src/adapters/SitesAdapter.js"></script>
+    <script type="text/javascript" src="src/index.js"></script>
 </body>
 </html>
