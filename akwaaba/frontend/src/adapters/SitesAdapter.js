@@ -1,6 +1,7 @@
 class SitesAdapter {
     constructor(){
-        this.baseUrl = 'http://localhost:3000/api/v1/sites'
+        this.baseUrl = 
+        'http://localhost:3000/api/v1/sites'
     }
 
     getSites() {

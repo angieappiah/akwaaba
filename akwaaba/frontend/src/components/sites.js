@@ -9,7 +9,16 @@ class Sites {
         this.adapter
         .getSites()
         .then(sites => {
-            console.log(sites)
+           return console.log(sites)
         })
+        .then(() => {
+            this.render()
+        })
+    }
+
+    render(){
+        const siteContainer = document.getElementById('site-container')
+        siteContainer.innerHTML = 'Top 10'
+
     }
 }
