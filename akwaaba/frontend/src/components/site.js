@@ -6,4 +6,8 @@ class Site {
         this.description = siteJSON.description
         this.likes = siteJSON.likes
     }
+
+    renderLi(){
+        return `<li>${this.name}</li>`
+    }
 }

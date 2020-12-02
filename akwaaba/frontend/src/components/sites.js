@@ -2,9 +2,21 @@ class Sites {
     constructor(){
         this.sites = []
         this.adapter = new SitesAdapter()
-        //this.bindEventListeners()
+        this.initBindingsAndEventListeners()
         this.fetchAndLoadSites()
     }
+
+    initBindingsAndEventListeners(){
+        this.siteContainer = document.getElementById('site-container')
+        this.newSiteName = document.getElementById('new-site-form')
+        this.newSiteName = document.addEventListener(`submit`, this.createSite.bind(this))
+    }
+
+    createSite(e){
+        e.preventDefault()
+        console.log ('didi')
+    }
+
     fetchAndLoadSites(){
         this.adapter
         .getSites()
@@ -17,8 +29,7 @@ class Sites {
     }
 
     render(){
-        const siteContainer = document.getElementById('site-container')
-        siteContainer.innerHTML = this.sites.map(site => ` <li>${site.name}</li>`).join('')
+       this.siteContainer.innerHTML = this.sites.map(site => site.renderLi()).join('')
 
     }
 }
