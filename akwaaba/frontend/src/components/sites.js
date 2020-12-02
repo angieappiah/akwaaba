@@ -10,7 +10,6 @@ class Sites {
         .getSites()
         .then(sites => {
             sites.forEach(site => this.sites.push(new Site(site)))
-            console.log(sites)
         })
         .then(() => {
             this.render()
@@ -19,7 +18,7 @@ class Sites {
 
     render(){
         const siteContainer = document.getElementById('site-container')
-        siteContainer.innerHTML = 'Top 10'
+        siteContainer.innerHTML = this.sites.map(site => ` <li>${site.name}</li>`).join('')
 
     }
 }

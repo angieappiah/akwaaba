@@ -1,4 +1,4 @@
-class site {
+class Site {
     constructor(siteJSON){
         this.id = siteJSON.id
         this.name = siteJSON.name
