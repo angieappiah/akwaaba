@@ -9,7 +9,8 @@ class Sites {
         this.adapter
         .getSites()
         .then(sites => {
-           return console.log(sites)
+            sites.forEach(site => this.sites.push(new Site(site)))
+            console.log(sites)
         })
         .then(() => {
             this.render()
