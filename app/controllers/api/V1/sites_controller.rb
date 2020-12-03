@@ -29,6 +29,6 @@ class Api::V1::SitesController < ApplicationController
 
     private
     def site_params
-        params.require (:site).permit(:name, :region, :description, :likes)
+        params.require(:site).permit(:name, :region, :description, :likes)
     end
 end
