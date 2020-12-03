@@ -8,13 +8,20 @@ class Sites {
 
     initBindingsAndEventListeners(){
         this.siteContainer = document.getElementById('site-container')
-        this.newSiteName = document.getElementById('new-site-form')
-        this.newSiteName = document.addEventListener(`submit`, this.createSite.bind(this))
+        this.newSiteName = document.getElementById('new-site-name')
+        this.SiteForm = document.getElementById('new-site-form')
+        this.SiteForm.addEventListener(`submit`, this.createSite.bind(this))
     }
 
     createSite(e){
-        e.preventDefault()
-        console.log ('didi')
+      e.preventDefault()
+      const name = this.newSiteName.value
+
+      this.adapter.createSite(name).then(site => {
+          this.sites.push(new Site(site))
+          this.render()
+      })
+       
     }
 
     fetchAndLoadSites(){
