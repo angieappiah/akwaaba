@@ -9,6 +9,8 @@ class Sites {
     initBindingsAndEventListeners(){
         this.siteContainer = document.getElementById('site-container')
         this.newSiteName = document.getElementById('new-site-name')
+        this.newSiteRegion = document.getElementById('new-site-region')
+        this.newSiteDescription = document.getElementById('new-site-description')
         this.SiteForm = document.getElementById('new-site-form')
         this.SiteForm.addEventListener(`submit`, this.createSite.bind(this))
     }
@@ -16,6 +18,9 @@ class Sites {
     createSite(e){
       e.preventDefault()
       const name = this.newSiteName.value
+      const region = this.newSiteRegion.value
+      const description = this.newSiteDescription.value
+      
 
       this.adapter.createSite(name).then(site => {
           this.sites.push(new Site(site))

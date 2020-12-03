@@ -9,10 +9,13 @@ class SitesAdapter {
         )
     } 
 
-    createSite(name){
+    createSite(name, region, description){
         const site = {
-         name: name
+         name: name,
+         region: region,
+         description: description
         }
+       
         return fetch(this.baseUrl,{
             method: 'POST',
             headers: {
