@@ -5,6 +5,7 @@ class Site {
         this.region = siteJSON.region
         this.description = siteJSON.description
         this.likes = siteJSON.likes
+        this.photo = siteJSON.photo.url
     }
 
     renderCard(){

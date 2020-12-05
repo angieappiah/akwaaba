@@ -9,11 +9,12 @@ class SitesAdapter {
         )
     } 
 
-    createSite(name, region, description){
+    createSite(name, region, description, photo){
         const site = {
          name: name,
          region: region,
-         description: description
+         description: description,
+         photo: photo
         }
        
         return fetch(this.baseUrl,{

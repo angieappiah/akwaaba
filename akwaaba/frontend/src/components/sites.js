@@ -11,6 +11,7 @@ class Sites {
         this.newSiteName = document.getElementById('new-site-name')
         this.newSiteRegion = document.getElementById('new-site-region')
         this.newSiteDescription = document.getElementById('new-site-description')
+        this.newSitePhoto = document.getElementById('new-site-photo')
         this.SiteForm = document.getElementById('new-site-form')
         this.SiteForm.addEventListener(`submit`, this.createSite.bind(this))
     }
@@ -20,9 +21,10 @@ class Sites {
       const name = this.newSiteName.value
       const region = this.newSiteRegion.value
       const description= this.newSiteDescription.value
+      const photo= this.newSitePhoto.value
       
 
-      this.adapter.createSite(name, region, description).then(site => {
+      this.adapter.createSite(name, region, description, photo).then(site => {
           this.sites.push(new Site(site))
           this.render()
       })
