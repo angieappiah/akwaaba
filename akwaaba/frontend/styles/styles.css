@@ -10,7 +10,7 @@ header {
 
 header,
 footer {
-  background: #486090;
+  background: #9c5d5d;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -18,13 +18,6 @@ footer {
 .header-title {
   font-family: "News Cycle", sans-serif;
   font-size: 4rem;
-  color: #E6E7FD;
-  text-transform: uppercase;
-  letter-spacing: 0.3em; }
-
-.footer-title {
-  font-family: "News Cycle", sans-serif;
-  font-size: 1rem;
   color: #E6E7FD;
   text-transform: uppercase;
   letter-spacing: 0.3em; }
@@ -57,14 +50,13 @@ main {
   font-family: "Work Sans", sans-serif;
   font-size: 2.25rem;
   font-weight: 300;
-  color: #486090; }
+  color: #4b0202; }
 
 footer {
   grid-area: footer; }
 
 .card {
   position: relative;
-  display: grid;
   grid-template: "img title" "img content" auto / 1fr 1fr;
   grid-column-gap: 1em;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);

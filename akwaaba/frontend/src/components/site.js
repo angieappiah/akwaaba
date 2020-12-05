@@ -12,9 +12,8 @@ class Site {
         <h2 class="card-title">${this.name}</h2>
           <div class="card-content">
              <ul>
-                 <li>Tag</li>
-                 <li>Tag</li>
-                 <li>Tag</li>
+                 <h3>${this.region}</h3>
+                 <h4>${this.description}</h4>
              </ul>
              <button type='button' value=${this.likes} id=${this.id}>
              ${this.likes} Likes
