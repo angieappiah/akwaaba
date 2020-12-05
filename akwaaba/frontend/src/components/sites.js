@@ -19,10 +19,10 @@ class Sites {
       e.preventDefault()
       const name = this.newSiteName.value
       const region = this.newSiteRegion.value
-      const description = this.newSiteDescription.value
+      const description= this.newSiteDescription.value
       
 
-      this.adapter.createSite(name).then(site => {
+      this.adapter.createSite(name, region, description).then(site => {
           this.sites.push(new Site(site))
           this.render()
       })
@@ -41,7 +41,7 @@ class Sites {
     }
 
     render(){
-       this.siteContainer.innerHTML = this.sites.map(site => site.renderLi()).join('')
+       this.siteContainer.innerHTML = this.sites.map(site => site.renderCard()).join('')
 
     }
 }

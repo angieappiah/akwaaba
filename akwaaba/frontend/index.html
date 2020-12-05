@@ -7,27 +7,29 @@
     <title>The Year Of Return</title>
 </head>
 <body>
-
-    <header>
-     <h1 class="header-title">Popular Sites</h1>
+     <header>
+     <h1 class="header-title">Top 10 Popular Sites</h1>
     </header>
 
     <div class="add-site">
-        <h1 class="add-Site-title">Create a New Site</h1>
+        <h1 class="add-Site-title">Add a New Site</h1>
         <div id="new-site-container"></div>
         <form id="new-site-form">
-          <input type="text" name="site-name" id="new-site-name" >
-          <input type="text" name="site-region" id="new-site-region" >
-          <input type="text" name="site-description" id="new-site-description" >
+          <label for="site-name">Name</label>
+          <input type="text" name="site-name" id="new-site-name">
+          <label for="site-region">Region</label>
+          <input type="text" name="site-region" id="new-site-region">
+          <label for="site-description">Description</label>
+          <input type="text" name="site-description" id="new-site-description">
           <input type="submit" value="Save Site">
         </form>
     </div>
     
     <main>
         <h1 class="sites-header">Existing Sites</h1>
-        <ul id="site-container">
+        <div id="site-container">
 
-        </ul>
+        </div>
     </main>
 
 

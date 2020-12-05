@@ -7,7 +7,20 @@ class Site {
         this.likes = siteJSON.likes
     }
 
-    renderLi(){
-        return `<li>${this.name}</li>`
+    renderCard(){
+        return `<div class= "card" data-id=${this.id}>
+        <h2 class="card-title">${this.name}</h2>
+          <div class="card-content">
+             <ul>
+                 <li>Tag</li>
+                 <li>Tag</li>
+                 <li>Tag</li>
+             </ul>
+             <button type='button' value=${this.likes} id=${this.id}>
+             ${this.likes} Likes
+             <span><i class="fas fa-thumbs-up"></i></span>
+           </button>
+          </div>
+        </div>`
     }
 }
