@@ -26,4 +26,19 @@ class SitesAdapter {
         }).then(res => res.json())
     }
 
+    updateLike(id, newValue) {
+        const site = {
+          likes: newValue,
+        }
+    
+        return fetch(`${this.baseUrl}/${id}`, {
+          method: 'PATCH',
+          headers: {
+            'content-type': 'application/json',
+          },
+          body: JSON.stringify({ site }),
+        }).then(res => res.json())
+    }
+
+
 }

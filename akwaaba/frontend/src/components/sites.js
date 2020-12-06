@@ -27,6 +27,7 @@ class Sites {
       this.adapter.createSite(name, region, description, photo).then(site => {
           this.sites.push(new Site(site))
           this.render()
+          this.likeListener()
       })
        
     }
@@ -39,6 +40,7 @@ class Sites {
         })
         .then(() => {
             this.render()
+            this.likeListener()
         })
     }
 
@@ -46,4 +48,24 @@ class Sites {
        this.siteContainer.innerHTML = this.sites.map(site => site.renderCard()).join('')
 
     }
+
+    likeListener(){
+        this.buttons = document.getElementsByTagName('button')
+        let i = 0;
+        for (i = 0; i < this.buttons.length; i++) {
+          this.buttons[i].addEventListener("click", this.likeIncrement.bind(this))
+        }
+    }
+
+
+  likeIncrement(e) {
+    const likes = parseInt(e.target.value)
+    const newValue = likes + 1
+    const id = parseInt(e.target.id)
+
+    e.target.innerText = `${newValue} Likes`
+    e.target.value = newValue
+
+    this.adapter.updateLike(id, newValue)
+  }
 }
