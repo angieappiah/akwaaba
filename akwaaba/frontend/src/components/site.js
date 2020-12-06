@@ -5,12 +5,13 @@ class Site {
         this.region = siteJSON.region
         this.description = siteJSON.description
         this.likes = siteJSON.likes
-        this.photo = siteJSON.photo.url
+        this.photo = siteJSON.photos[0].url
     }
 
     renderCard(){
         return `<div class= "card" data-id=${this.id}>
         <h2 class="card-title">${this.name}</h2>
+        <img class="card-img" src="${this.photo}" alt="${this.name}">
           <div class="card-content">
              <ul>
                  <h3>${this.region}</h3>
