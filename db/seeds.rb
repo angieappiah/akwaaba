@@ -7,24 +7,24 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Site.create([
-  {name: "boti",
-   region: "eastern",
+  {name: "BOTI FALLS",
+   region: "Eastern Region",
    description: "twin waterfall",
    likes: "5",
    photos_attributes: [url:"https://touringghana.com/wp-content/uploads/2016/03/boti-falls.jpg"]
     },
 
 
-  {name: "cape coast castle",
-  region: "central",
+  {name: "CAPE COAST CASTLE",
+  region: "Central Region",
   description: " A historical slave museum with a Ghanaian arts and crafts gift", 
   likes: "20",
   photos_attributes: [url:"https://touringghana.com/wp-content/uploads/2016/03/cape-coast-castle2.jpg"]
 },
 
 
-  {name: "Mole National Park",
-  region: "Northern", 
+  {name: "MOLE NATIONAL PARK",
+  region: "Northern Region", 
   description: "Large and commonly seen mammals including elephant, kob, roan antelope, hartebeest, waterbuck, bushbuck, warthog, buffalo, several duikers, baboon, patas and green (vervet) monkeys", 
   likes: "10",
   photos_attributes: [url:"https://touringghana.com/wp-content/uploads/2016/03/mole.jpg"]
