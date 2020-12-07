@@ -21,7 +21,7 @@ class Sites {
       const name = this.newSiteName.value
       const region = this.newSiteRegion.value
       const description= this.newSiteDescription.value
-      const photo= this.newSitePhoto.value
+      const photo = this.newSitePhoto.value
       
 
       this.adapter.createSite(name, region, description, photo).then(site => {

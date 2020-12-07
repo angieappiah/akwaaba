@@ -1,16 +1,16 @@
-@import url("https://fonts.googleapis.com/css?family=News+Cycle|Work+Sans:100,300&display=swap");
 body {
-  line-height: 1.6;
+  line-height: 1.2;
   display: grid;
   grid-template: "header header header header" 10em "hero hero hero hero" 50vh ". main main ." auto "footer footer footer footer" 10em/1fr minmax(30em, 5fr) 2fr 1fr;
   grid-column-gap: 1.5em; }
 
 header {
-  grid-area: header; }
+  grid-area: header;
+ }
 
 header,
 footer {
-  background: #812020;
+  background: #8b1212;
   display: flex;
   justify-content: center;
   align-items: center; }

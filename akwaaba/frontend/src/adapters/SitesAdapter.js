@@ -14,7 +14,9 @@ class SitesAdapter {
          name: name,
          region: region,
          description: description,
-         photo: photo
+         photo: {
+            url: photo
+          }
         }
        
         return fetch(this.baseUrl,{
