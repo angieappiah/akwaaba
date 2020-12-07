@@ -10,7 +10,8 @@ class Api::V1::SitesController < ApplicationController
     end
 
     def create
-        @site = Site.create(site_params)
+        @site = Site.new(site_params)
+        @site.save
         @photo = Photo.new(url: params["photo"]["url"], site_id: @site_id)
         @photo.save
         render json: @site, :include => {:photos => {only: :url}}, :except => [:created_at, :updated_at],  status: 200
@@ -18,7 +19,7 @@ class Api::V1::SitesController < ApplicationController
 
     def update
         @site = Site.find(params[:id])
-        @site.update(site_params)
+        @site.update(likes: params["site"]["likes"])
         render json: @site, status: 200
     end
 
