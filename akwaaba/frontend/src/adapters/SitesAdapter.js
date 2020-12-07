@@ -7,6 +7,7 @@ class SitesAdapter {
     getSites() {
         return fetch(this.baseUrl).then(res => res.json()
         )
+      
     } 
 
     createSite(name, region, description, photo){

@@ -1,12 +1,22 @@
 class Site {
     constructor(siteJSON){
+        console.log(siteJSON)
         this.id = siteJSON.id
         this.name = siteJSON.name
         this.region = siteJSON.region
         this.description = siteJSON.description
         this.likes = siteJSON.likes
-        this.photo = siteJSON.photos//[0].url
+        if (siteJSON.photos.length > 0 ){
+            this.photo = siteJSON.photos[0].url
+        }
+        else {
+            this.photo = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Ghana_Flag.svg/1200px-Ghana_Flag.svg.png"
+        }
+
+        
     }
+
+ 
 
     renderCard(){
         return `<div class= "card" data-id=${this.id}>

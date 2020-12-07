@@ -41,7 +41,7 @@ input {
   font-family: "Work Sans", sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  color: #000; }
+  color: rgb(7, 2, 2); }
 
 main {
   grid-area: main; }
