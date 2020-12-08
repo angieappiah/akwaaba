@@ -11,12 +11,10 @@ class Site {
         }
         else {
             this.photo = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Ghana_Flag.svg/1200px-Ghana_Flag.svg.png"
-        }
+       }
 
         
     }
-
- 
 
     renderCard(){
         return `<div class= "card" data-id=${this.id}>
