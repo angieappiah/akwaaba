@@ -9,3 +9,13 @@ GETTING STARTED
 Run 'rails s' to start the rails server
 
 Open the index.html file in your browser
+
+See the top 10 Tourist Sites in Ghana
+
+CONTRIBUTING
+
+LICENSE
+
+This project is licensed under the MIT License.
+
+
