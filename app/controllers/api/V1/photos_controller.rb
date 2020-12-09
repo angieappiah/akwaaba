@@ -14,6 +14,15 @@ class Api::V1::PhotosController < ApplicationController
         render json: @photo status 200
     end
 
+    def update
+        @photo = Photo.update(photo_params)
+        if @photo.save
+            render json: @photo status 200
+        else 
+            render json {message: "failed"}
+        end
+    end
+
 
     private
 

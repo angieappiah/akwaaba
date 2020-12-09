@@ -12,8 +12,8 @@ class Api::V1::SitesController < ApplicationController
     def create
         @site = Site.create(site_params)
         @site.save
-        # @photo = Photo.create(url: params["photo"]["url"], site_id: @site_id)
-        # @photo.save
+        @photo = Photo.create(url: params["photo"]["url"], site_id: @site_id)
+        @photo.save
         render json: @site, :include => {:photos => {only: :url}}, :except => [:created_at, :updated_at],  status: 200
     end
 
