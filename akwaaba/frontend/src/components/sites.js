@@ -10,10 +10,11 @@ class Sites {
         this.siteContainer = document.getElementById('site-container')
         this.newSiteName = document.getElementById('new-site-name')
         this.newSiteRegion = document.getElementById('new-site-region')
-        this.newSiteDescription = document.getElementById('new-site-description')
         this.newSitePhoto = document.getElementById('new-site-photo')
+        this.newSiteDescription = document.getElementById('new-site-description')
+        this.newSiteForm = document.getElementById('new-site-form')
         this.SiteForm = document.getElementById('new-site-form')
-        this.SiteForm.addEventListener(`submit`, this.createSite.bind(this))
+        this.newSiteForm.addEventListener(`submit`, this.createSite.bind(this))
     }
 
     createSite(e){
@@ -36,7 +37,7 @@ class Sites {
         this.adapter
         .getSites()
         .then(sites => {
-            sites.forEach(site => this.sites.push(new Site(site)))
+            sites.forEach(site => this.sites.push(new Site(site)))      
         })
         .then(() => {
             this.render()

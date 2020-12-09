@@ -8,10 +8,10 @@ class Site {
         this.likes = siteJSON.likes
         if (siteJSON.photos.length > 0 ){
             this.photo = siteJSON.photos[0].url
-        }
-        else {
-            this.photo = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Ghana_Flag.svg/1200px-Ghana_Flag.svg.png"
        }
+        else {
+           this.photo = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Ghana_Flag.svg/1200px-Ghana_Flag.svg.png"
+      }
 
         
     }
