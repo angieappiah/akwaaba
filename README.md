@@ -14,6 +14,8 @@ See the top 10 Tourist Sites in Ghana
 
 CONTRIBUTING
 
+Contributions are welcome, It can be made by opening  an issue or making a pull request to this repository.
+
 LICENSE
 
 This project is licensed under the MIT License.
