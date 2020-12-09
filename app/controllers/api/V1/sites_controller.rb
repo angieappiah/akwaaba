@@ -10,7 +10,7 @@ class Api::V1::SitesController < ApplicationController
     end
 
     def create
-        @site = Site.new(site_params)
+        @site = Site.create(site_params)
         @site.save
         @photo = Photo.create(url: params["photo"]["url"], site_id: @site_id)
         @photo.save
@@ -32,6 +32,6 @@ class Api::V1::SitesController < ApplicationController
 
     private
     def site_params
-        params.require(:site, :photos).permit(:name, :region, :description, :likes, :photos_attributes => [:url])
+        params.require(:site).permit(:name, :region, :description, :likes, :photos_attributes => [:url])
     end
 end
