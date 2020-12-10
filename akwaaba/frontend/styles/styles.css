@@ -45,6 +45,11 @@ input {
 
 main {
   grid-area: main; }
+  .site-header {
+    font-family: "Work Sans", sans-serif;
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: #486090; }
 
 .sites-header {
   font-family: "Work Sans", sans-serif;

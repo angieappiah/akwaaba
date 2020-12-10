@@ -1,6 +1,5 @@
 class Site {
     constructor(siteJSON){
-        console.log(siteJSON)
         this.id = siteJSON.id
         this.name = siteJSON.name
         this.region = siteJSON.region
@@ -8,13 +7,14 @@ class Site {
         this.likes = siteJSON.likes
         if (siteJSON.photos.length > 0 ){
             this.photo = siteJSON.photos[0].url
-       }
+        }
         else {
-           this.photo = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Ghana_Flag.svg/1200px-Ghana_Flag.svg.png"
-      }
+            this.photo = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Ghana_Flag.svg/1200px-Ghana_Flag.svg.png"
+        }
 
         
     }
+
 
     renderCard(){
         return `<div class= "card" data-id=${this.id}>
@@ -25,6 +25,7 @@ class Site {
                  <h3>${this.region}</h3>
                  <h4>${this.description}</h4>
              </ul>
+             <a class= "card_link" target="_blank" href="https://dobiison.com/CapeCoastCastle/index.html"${this.name},${this.description}> More Details>
              <button type='button' value=${this.likes} id=${this.id}>
              ${this.likes} Likes
              <span><i class="fas fa-thumbs-up"></i></span>
