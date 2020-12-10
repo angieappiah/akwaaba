@@ -11,7 +11,7 @@ Site.create([
    region: "Central Region",
    description: "The historic Slave Building",
    likes: "5",
-   photos_attributes: [url:  "https://theculturetrip.com/africa/ghana/articles/ghana-s-slave-castles-the-shocking-story-of-the-ghanaian-cape-coast/"]
+   photos_attributes: [url:  "https://touringghana.com/wp-content/uploads/2016/02/h1.jpg"]
     },
 
 
@@ -19,7 +19,7 @@ Site.create([
   region: "Central Region",
   description: " A historical slave museum with Ghanaian arts and crafts", 
   likes: "20",
-  photos_attributes: [url:"https://theculturetrip.com/africa/ghana/articles/ghana-s-slave-castles-the-shocking-story-of-the-ghanaian-cape-coast/"]
+  photos_attributes: [url:"https://touringghana.com/wp-content/uploads/2016/03/cape-coast-castle2.jpg"]
 }
 ])
 
