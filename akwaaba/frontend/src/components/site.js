@@ -9,7 +9,7 @@ class Site {
             this.photo = siteJSON.photos[0].url
         }
         else {
-            this.photo = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Ghana_Flag.svg/1200px-Ghana_Flag.svg.png"
+            this.photo = "https://touringghana.com/wp-content/uploads/2016/03/volta-lake.jpg"
         }
 
         
@@ -25,7 +25,7 @@ class Site {
                  <h3>${this.region}</h3>
                  <h4>${this.description}</h4>
              </ul>
-             <a class= "card_link" target="_blank" href="https://dobiison.com/CapeCoastCastle/index.html"${this.name},${this.description}> More Details>
+             <a href="https://dobiison.com/CapeCoastCastle/index.html"> More Details</a>
              <button type='button' value=${this.likes} id=${this.id}>
              ${this.likes} Likes
              <span><i class="fas fa-thumbs-up"></i></span>
