@@ -9,13 +9,17 @@ class Api::V1::PhotosController < ApplicationController
         render json: @photo status 200
     end
 
+    def new
+        @photo = Photo.new
+    end
+
     def create
-        @photo = Photo.create(photo_params)
+        @photo = Photo.create(photos_params)
         render json: @photo status 200
     end
 
     def update
-        @photo = Photo.update(photo_params)
+        @photo = Photo.update(photos_params)
         if @photo.save
             render json: @photo status 200
         else 
@@ -26,7 +30,7 @@ class Api::V1::PhotosController < ApplicationController
 
     private
 
-    def photo_params
+    def photos_params
         params.require(:photo).permit(:url, :reviews, :site_id)
     end
 end
