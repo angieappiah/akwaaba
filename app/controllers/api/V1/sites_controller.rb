@@ -10,11 +10,9 @@ class Api::V1::SitesController < ApplicationController
     end
 
     def create
-        @site = Site.new(site_params)
-        @site.save
-        @photo = Photo.new(url: params["photo"]["url"], site_id: @site_id)
-        @photo.save
-        render json: @site, :include => {:photos => {only: :url}}, :except => [:created_at, :updated_at],  status: 200
+        @site = Site.create(site_params)
+        render json: @site, status: 200
+
     end
 
     def update
@@ -32,6 +30,6 @@ class Api::V1::SitesController < ApplicationController
 
     private
     def site_params
-        params.require(:site).permit(:name, :region, :description, :likes, photos_attributes: [:url])
+        params.require(:site).permit(:name, :region, :image, :description, :likes, photos_attributes: [:url])
     end
 end
