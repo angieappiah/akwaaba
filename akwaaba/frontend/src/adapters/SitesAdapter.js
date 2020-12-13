@@ -10,12 +10,13 @@ class SitesAdapter {
       
     } 
 
-    createSite(name, region, description, image){
+    createSite(name, region, description, image, comment){
         const site = {
          name: name,
          region: region,
          image: image,
          description: description,
+         comment: comment
         //  photo: {
         //     url: photo
         //   }

@@ -26,8 +26,10 @@ class Sites {
 
       this.adapter.createSite(name, region, description, image).then(site => {
           this.sites.push(new Site(site))
+          this.resetField()
           this.render()
           this.likeListener()
+          
       })
        
     }
@@ -42,6 +44,13 @@ class Sites {
             this.render()
             this.likeListener()
         })
+    }
+
+    resetField(){
+      this.newSiteName.value = ''
+      this.newSiteRegion.value = ''
+      this.newSiteDescription.value = ''
+      this.newSiteImage.value = ''
     }
 
     render(){
@@ -68,4 +77,6 @@ class Sites {
 
     this.adapter.updateLike(id, newValue)
   }
+
+  
 }

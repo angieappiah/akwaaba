@@ -28,10 +28,12 @@ class Site {
              <ul>
                  <h3>${this.region}</h3>
                  <h4>${this.description}</h4>
+                 
              </ul>
              <a href="https://dobiison.com/CapeCoastCastle/index.html"> More Details</a>
              <button type='button' value=${this.likes} id=${this.id}>
              ${this.likes} Likes
+             
            </button>
           </div>
         </div>`
