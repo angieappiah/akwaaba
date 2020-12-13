@@ -4,13 +4,17 @@ class Site {
         this.name = siteJSON.name
         this.region = siteJSON.region
         this.description = siteJSON.description
+        this.image = siteJSON.image
         this.likes = siteJSON.likes
-        if (siteJSON.photos.length > 0 ){
-            this.photo = siteJSON.photos[0].url
-        }
-        else {
-            this.photo = "https://touringghana.com/wp-content/uploads/2016/03/volta-lake.jpg"
-        }
+        //this.photos = siteJSON.photos
+        //this.photos = siteJSON.photos.url
+        // if (siteJSON.photos.length > 0 ){
+             //this.photo = siteJSON.photos[0].url
+           
+        // }
+        // else {
+        //     this.photo = "https://touringghana.com/wp-content/uploads/2016/03/volta-lake.jpg"
+        // }
 
         
     }
@@ -19,7 +23,7 @@ class Site {
     renderCard(){
         return `<div class= "card" data-id=${this.id}>
         <h2 class="card-title">${this.name}</h2>
-        <img class="card-img" src="${this.photo}" alt="${this.name}">
+        <img class="card-img" src="${this.image}" alt="${this.name}">
           <div class="card-content">
              <ul>
                  <h3>${this.region}</h3>
@@ -28,7 +32,6 @@ class Site {
              <a href="https://dobiison.com/CapeCoastCastle/index.html"> More Details</a>
              <button type='button' value=${this.likes} id=${this.id}>
              ${this.likes} Likes
-             <span><i class="fas fa-thumbs-up"></i></span>
            </button>
           </div>
         </div>`

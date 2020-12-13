@@ -10,14 +10,15 @@ class SitesAdapter {
       
     } 
 
-    createSite(name, region, description, photo){
+    createSite(name, region, description, image){
         const site = {
          name: name,
          region: region,
+         image: image,
          description: description,
-         photo: {
-            url: photo
-          }
+        //  photo: {
+        //     url: photo
+        //   }
         }
        
         return fetch(this.baseUrl,{
