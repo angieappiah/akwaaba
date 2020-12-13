@@ -1,6 +1,6 @@
 class Site < ApplicationRecord
-    has_many :photos
+    has_many :reviews
 
-    accepts_nested_attributes_for :photos
+    accepts_nested_attributes_for :reviews
     
 end

@@ -1,18 +1,17 @@
 class Api::V1::SitesController < ApplicationController
     def index
         @sites = Site.all
-        render json: @sites, :include => {:photos => {only: :url}}, :except => [:created_at, :updated_at],  status: 200
+        render json: @sites, :include => {:reviews => {only: :comments}}, :except => [:created_at, :updated_at],  status: 200
     end
 
     def show
         @site = Site.find(params[:id])
-        render json: @site, :include => {:photos => {only: :url}}, :except => [:created_at, :updated_at],  status: 200
+        render json: @site, :include => {:reviews => {only: :comments}}, :except => [:created_at, :updated_at],  status: 200
     end
 
     def create
         @site = Site.create(site_params)
         render json: @site, status: 200
-
     end
 
     def update
@@ -30,6 +29,6 @@ class Api::V1::SitesController < ApplicationController
 
     private
     def site_params
-        params.require(:site).permit(:name, :region, :image, :description, :likes, photos_attributes: [:url])
+        params.require(:site).permit(:name, :region, :image, :description, :likes, reviews_attributes: [:comments])
     end
 end
