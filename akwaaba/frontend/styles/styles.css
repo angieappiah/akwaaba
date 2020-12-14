@@ -10,7 +10,7 @@ header {
 
 header,
 footer {
-  background: #8b1212;
+  background-color: #5f1010;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -49,7 +49,7 @@ main {
     font-family: Helvetica;
     font-size: 2.25rem;
     font-weight: 300;
-    color: #486090; }
+    color: #edf0f5; }
 
 .sites-header {
   font-family: Helvetica;
@@ -66,9 +66,10 @@ footer {
   grid-column-gap: 1em;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
   padding: 1.5em;
-  border: grey solid 1px;
+  border: rgb(121, 27, 27) solid 4px;
   margin-bottom: 1.5em;
   justify-content: center;
+  background-color: #b9b9b5;
   align-items: center; }
 
 .card-img {
@@ -79,9 +80,9 @@ footer {
   grid-area: title;
   margin: 0;
   font-family: Helvetica;
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 300;
-  color: #486090; }
+  color: #060607; }
 
 
   .card-content button {

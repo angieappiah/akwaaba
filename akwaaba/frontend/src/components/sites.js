@@ -12,8 +12,11 @@ class Sites {
         this.newSiteRegion = document.getElementById('new-site-region')
         this.newSiteDescription = document.getElementById('new-site-description')
         this.newSiteImage = document.getElementById('new-site-image')
+        this.newSiteReviews = document.getElementById('new-site-reviews')
         this.SiteForm = document.getElementById('new-site-form')
         this.SiteForm.addEventListener(`submit`, this.createSite.bind(this))
+        this.SiteForm.addEventListener('dblclick', this.handleSiteClick.bind(this)) 
+          
     }
 
     createSite(e){
@@ -22,9 +25,10 @@ class Sites {
       const region = this.newSiteRegion.value
       const description= this.newSiteDescription.value
       const image = this.newSiteImage.value
+      const reviews = this.newSiteReviews.value
       
 
-      this.adapter.createSite(name, region, description, image).then(site => {
+      this.adapter.createSite(name, region, description, image, reviews).then(site => {
           this.sites.push(new Site(site))
           this.resetField()
           this.render()
@@ -32,6 +36,10 @@ class Sites {
           
       })
        
+    }
+
+    handleSiteClick(e) {
+      console.log(e.target)
     }
 
     fetchAndLoadSites(){
