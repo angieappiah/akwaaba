@@ -24,5 +24,5 @@ sites = [
 ]
 
 sites.each do |site|
-  Site.create(name: site[:name], region: site[:region], description: site[:description], image: site[:image], likes: site[:likes])
+  Site.create(site)
 end

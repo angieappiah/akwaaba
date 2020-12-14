@@ -11,6 +11,7 @@ class Api::V1::SitesController < ApplicationController
 
     def create
         @site = Site.create(site_params)
+        @review = Review.create(comments: params["review"]["comments"], site_id: @site.id)
         render json: @site, status: 200
     end
 
