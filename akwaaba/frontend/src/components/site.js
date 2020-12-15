@@ -6,7 +6,7 @@ class Site {
         this.description = siteJSON.description
         this.image = siteJSON.image
         this.likes = siteJSON.likes
-        this.reviews = siteJSON.reviews
+        this.reviews = siteJSON.reviews[0].comments
         //this.photos = siteJSON.photos.url
         // if (siteJSON.photos.length > 0 ){
              //this.photo = siteJSON.photos[0].url
@@ -28,7 +28,7 @@ class Site {
              <ul>
                  <h3>${this.region}</h3>
                  <h4>${this.description}</h4>
-                 <h4>${this.reviews}</h4>
+                 <h4>Comments: ${this.reviews}</h4>
                  
              </ul>
              <a href="https://dobiison.com/CapeCoastCastle/index.html"> More Details</a>

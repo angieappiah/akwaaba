@@ -25,10 +25,10 @@ class Sites {
       const region = this.newSiteRegion.value
       const description= this.newSiteDescription.value
       const image = this.newSiteImage.value
-      const reviews = this.newSiteReviews.value
+      const review = this.newSiteReview.value
       
 
-      this.adapter.createSite(name, region, description, image, reviews).then(site => {
+      this.adapter.createSite(name, region, description, image, review).then(site => {
           this.sites.push(new Site(site))
           this.resetField()
           this.render()
