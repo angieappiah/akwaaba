@@ -11,7 +11,8 @@ sites = [
    region: "Central Region",
    description: "The historic Slave Building",
    likes: "5",
-   image:  "https://www.easytrackghana.com/images/photos/cape-coast-castle-gun-arrange.jpg"
+   image:  "https://www.easytrackghana.com/images/photos/cape-coast-castle-gun-arrange.jpg",
+   reviews_attributes: [comments: "a site to behold"]
     },
 
 
@@ -19,7 +20,8 @@ sites = [
   region: "Central Region",
   description: " A historical slave museum with Ghanaian arts and crafts", 
   likes: "20",
-  image:"https://www.easytrackghana.com/images/photos/cape-coast-castle-from-beach.jpg"
+  image:"https://www.easytrackghana.com/images/photos/cape-coast-castle-from-beach.jpg",
+  reviews_attributes: [comments: "a beautiful place"]
 }
 ]
 
