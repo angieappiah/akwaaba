@@ -7,28 +7,26 @@ class Sites {
     }
 
     initBindingsAndEventListeners(){
-        this.siteContainer = document.getElementById('site-container')
+        this.sitesContainer = document.getElementById('sites-container')
         this.newSiteName = document.getElementById('new-site-name')
-        this.newSiteRegion = document.getElementById('new-site-region')
         this.newSiteDescription = document.getElementById('new-site-description')
         this.newSiteImage = document.getElementById('new-site-image')
         this.newSiteReviews = document.getElementById('new-site-reviews')
         this.SiteForm = document.getElementById('new-site-form')
         this.SiteForm.addEventListener(`submit`, this.createSite.bind(this))
-        this.SiteForm.addEventListener('dblclick', this.handleSiteClick.bind(this)) 
+        //this.SiteForm.addEventListener('dblclick', this.handleSiteClick.bind(this)) 
           
     }
 
     createSite(e){
       e.preventDefault()
       const name = this.newSiteName.value
-      const region = this.newSiteRegion.value
       const description= this.newSiteDescription.value
       const image = this.newSiteImage.value
-      const review = this.newSiteReview.value
+      const reviews = this.newSiteReviews.value
       
 
-      this.adapter.createSite(name, region, description, image, review).then(site => {
+      this.adapter.createSite(name, description, image, reviews).then(site => {
           this.sites.push(new Site(site))
           this.resetField()
           this.render()
@@ -38,9 +36,9 @@ class Sites {
        
     }
 
-    handleSiteClick(e) {
-      console.log(e.target)
-    }
+    // handleSiteClick(e) {
+    //   console.log(e.target)
+    // }
 
     fetchAndLoadSites(){
         this.adapter
@@ -56,13 +54,12 @@ class Sites {
 
     resetField(){
       this.newSiteName.value = ''
-      this.newSiteRegion.value = ''
       this.newSiteDescription.value = ''
       this.newSiteImage.value = ''
     }
 
     render(){
-       this.siteContainer.innerHTML = this.sites.map(site => site.renderCard()).join('')
+       this.sitesContainer.innerHTML = this.sites.map(site => site.renderCard()).join('')
 
     }
 
