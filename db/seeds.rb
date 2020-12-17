@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-sites = [
+Site.create([
   {name: "CAPE COAST CASTLE",
-   region: "Central Region",
-   description: "The historic Slave Building",
+   description: "Follow the slave route to Cape Coast, visiting a memorial at the Slave River. 
+   Tour Cape Coast castle and contemplate the history of this beach",
    likes: "5",
    image:  "https://www.easytrackghana.com/images/photos/cape-coast-castle-gun-arrange.jpg",
    reviews_attributes: [comments: "a site to behold"]
@@ -17,14 +17,12 @@ sites = [
 
 
   {name: "The Slave Museum",
-  region: "Central Region",
-  description: " A historical slave museum with Ghanaian arts and crafts", 
+  description: " 	
+  The former slave dungeon at Cape Coast castle is a UNESCO World Heritage site commemorating a sad history inflicted on Africa,
+  and Ghana in particular. Those of African descent may have a Door of Return ceremony here and this tour
+  also permits a visit to a Posuban Shrine and a pineapple farm or a chapel square.", 
   likes: "20",
   image:"https://www.easytrackghana.com/images/photos/cape-coast-castle-from-beach.jpg",
   reviews_attributes: [comments: "a beautiful place"]
 }
-]
-
-sites.each do |site|
-  Site.create(site)
-end
+])
