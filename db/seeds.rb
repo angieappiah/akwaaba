@@ -26,3 +26,5 @@ Site.create([
   reviews_attributes: [comments: "a beautiful place"]
 }
 ])
+
+#site_a = Site.create()
