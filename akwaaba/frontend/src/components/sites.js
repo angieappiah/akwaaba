@@ -27,7 +27,7 @@ class Sites {
       
 
       this.adapter.createSite(name, description, image, reviews).then(site => {
-          this.sites.push(new Site(site))
+          this.sites.push(new Sites(site))
           this.resetField()
           this.render()
           this.likeListener()
@@ -56,10 +56,12 @@ class Sites {
       this.newSiteName.value = ''
       this.newSiteDescription.value = ''
       this.newSiteImage.value = ''
+      this.newSiteReviews.value = ''
     }
 
     render(){
-       this.sitesContainer.innerHTML = this.sites.map(site => site.renderCard()).join('')
+       this.sitesContainer.innerHTML = 
+       this.sites.map(site => site.renderCard()).join('')
 
     }
 

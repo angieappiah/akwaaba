@@ -19,12 +19,12 @@ class Site {
 
     renderCard(){
         return `<div class= "card" data-id=${this.id}>
+         <img class="card-img" src="${this.image}" alt="${this.name}">
         <h2 class="card-title">${this.name}</h2>
-        <img class="card-img" src="${this.image}" alt="${this.name}">
           <div class="card-content">
              <ul>
-                 <h4>${this.description}</h4>
-                 <h4>Comments: ${this.reviews}</h4>
+                 <li>${this.description}</li>
+                 <li>Comments: ${this.reviews}</li>
              </ul>
              <a href="https://dobiison.com/CapeCoastCastle/index.html"> More Details</a>
              <button type='button' value=${this.likes} id=${this.id}>
@@ -34,4 +34,4 @@ class Site {
           </div>
         </div>`
     }
-}
+} 

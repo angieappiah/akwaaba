@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <title>The Year Of Return</title>
 </head>
+
 <body>
-     <header>
-     <h1 class="header-title">Popular Sites In The Castle</h1>
+    <header>
+        <h1 class="header-title">Sites In The Castle</h1>
     </header>
 
     <div class="add-site">
-        <h1 class="add-Site-title">Add a New Site</h1>
+        <h1 class="add-Site-title">Add New Site</h1>
         <div id="new-site-container"></div>
         <form id="new-site-form">
-          <label for="site-name">Name</label>
-          <input type="text" name="site-name" id="new-site-name">
-          <label for="site-description">Description</label>
-          <input type="text" name="site-description" id="new-site-description">
-          <label for="site-image">Image</label>
-          <input type="text" name="site-image" id="new-site-image">
-          <label for="site-reviews">reviews</label>
-          <input type="text" name="site-reviews" id="new-site-reviews">
-          <input type="submit" value="Save Site">
+            <label for="site-name">Name</label>
+            <input type="text" name="site-name" id="new-site-name">
+            <label for="site-description">Description</label>
+            <input type="text" name="site-description" id="new-site-description">
+            <label for="site-image">Image</label>
+            <input type="text" name="site-image" id="new-site-image">
+            <label for="site-reviews">reviews</label>
+            <input type="text" name="site-reviews" id="new-site-reviews">
+            <input type="submit" value="Save Site">
         </form>
     </div>
-    
+
     <main>
         <h1 class="sites-header">Existing Sites</h1>
-        <div id="sites-container">
+        <ul id="sites-container">
 
-        </div>
+        </ul>
     </main>
 
     <footer>
@@ -45,4 +47,5 @@
     <script src="src/adapters/SitesAdapter.js"></script>
     <script type="text/javascript" src="src/index.js"></script>
 </body>
+
 </html>

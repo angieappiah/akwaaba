@@ -16,9 +16,7 @@ class SitesAdapter {
          image: image,
          description: description,
          review: {comments: review}
-        //  photo: {
-        //     url: photo
-        //   }
+     
         }
        
         return fetch(this.baseUrl,{
@@ -28,6 +26,10 @@ class SitesAdapter {
               },
             body: JSON.stringify(site)
         }).then(res => res.json())
+    }
+
+    deleteSite(){
+      let siteId = this.parentElement.getAttribute('site-id')
     }
 
     updateLike(id, newValue) {
